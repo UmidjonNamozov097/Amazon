@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <com.google.android.material.appbar.AppBarLayout
+       android:layout_width="match_parent"
+       android:layout_height="60dp"
+       android:background="#96DED1"
+       android:elevation="0dp">
+
+       <FrameLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+          <LinearLayout
+              android:layout_marginStart="10dp"
+              android:layout_marginEnd="10dp"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center">
+
+              <EditText
+                  android:layout_width="match_parent"
+                  android:layout_height="45dp"
+                  android:paddingStart="10dp"
+                  android:paddingEnd="10dp"
+                  android:hint="Search Amazon"
+                  android:background="@drawable/rounded_editext"
+
+                  android:drawableLeft="@drawable/ic_search"/>
+          </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:gravity="center|right">
+
+               <ImageView
+                   android:paddingEnd="10dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ic_center_focus"/>
+
+               <ImageView
+                   android:paddingEnd="20dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ic_mic_none"/>
+           </LinearLayout>
+       </FrameLayout>
+   </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:background="#cbcbcb">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="45dp"
+               android:background="#9096DED1"
+               android:gravity="center">
+               <ImageView
+                   android:layout_marginStart="10dp"
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:src="@drawable/ic_location"/>
+
+               <TextView
+                   android:layout_marginStart="10dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Deliver to Uzbekiston"
+                   android:textSize="18sp"/>
+           </LinearLayout>
+
+           <FrameLayout
+               android:layout_width="match_parent"
+               android:layout_height="500dp"
+               android:background="#ffffff">
+
+                   <ImageView
+                       android:layout_gravity="center|bottom"
+                       android:layout_width="250dp"
+                       android:layout_height="250dp"
+                       android:layout_marginBottom="200dp"
+                       android:src="@drawable/game_controll"/>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:gravity="bottom">
+
+                   <androidx.recyclerview.widget.RecyclerView
+                       android:id="@+id/rv_essential"
+                       android:layout_width="match_parent"
+                       android:layout_height="200dp"
+                       android:orientation="horizontal"
+                       android:layout_marginBottom="10dp"
+                       app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+               </LinearLayout>
+           </FrameLayout>
+
+           <LinearLayout
+               android:layout_marginTop="5dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="#ffffff"
+               android:orientation="vertical"
+               android:padding="10dp">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Sign in for the best experience"
+                   android:textSize="16sp"
+                   android:textColor="@color/black"/>
+
+               <Button
+                   android:layout_marginTop="5dp"
+                   android:layout_marginBottom="5dp"
+                   android:layout_marginStart="20dp"
+                   android:layout_marginEnd="20dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="50dp"
+                   android:text="Sign in securely"
+                   android:textAllCaps="false"
+                   android:background="@drawable/buttom_rounded"
+                   app:backgroundTint="@null"
+                   android:textColor="@color/black"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Create an account"
+                   android:textSize="14sp"
+                   android:textColor="@color/black"/>
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_marginTop="5dp"
+               android:padding="10dp"
+               android:layout_width="match_parent"
+               android:background="#ffffff"
+               android:orientation="vertical"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Woman's fashion sneakers"
+                   android:textSize="16sp"
+                   android:textColor="@color/black"/>
+
+               <LinearLayout
+                   android:id="@+id/ll_fashion"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+                   <LinearLayout
+                       android:layout_weight="1"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <ImageView
+                           android:layout_weight="1"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:layout_margin="1dp"
+                           android:scaleType="centerCrop"
+                           android:src="@drawable/woman_fashion_1"/>
+
+                       <ImageView
+                           android:scaleType="centerCrop"
+                           android:layout_weight="1"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:layout_margin="1dp"
+                           android:src="@drawable/woman_fashion_1"/>
+                   </LinearLayout>
+                   <LinearLayout
+                       android:layout_weight="1"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <ImageView
+                           android:scaleType="centerCrop"
+                           android:layout_weight="1"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:layout_margin="1dp"
+                           android:src="@drawable/woman_fashion_1"/>
+
+                       <ImageView
+                           android:scaleType="centerCrop"
+                           android:layout_weight="1"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:layout_margin="1dp"
+                           android:src="@drawable/woman_fashion_1"/>
+                   </LinearLayout>
+               </LinearLayout>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Seo more"
+                   android:textSize="14sp"
+                   android:textColor="#03A9F4"/>
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_marginTop="5dp"
+               android:padding="10dp"
+               android:layout_width="match_parent"
+               android:background="#ffffff"
+               android:orientation="vertical"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Popular Gifts in Camera"
+                   android:textSize="16sp"
+                   android:textColor="@color/black"/>
+
+               <LinearLayout
+                   android:id="@+id/ll_popular"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+                   <LinearLayout
+                       android:layout_weight="1"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <ImageView
+                           android:layout_weight="1"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:layout_margin="1dp"
+                           android:scaleType="centerCrop"
+                           android:src="@drawable/camera"/>
+
+                       <ImageView
+                           android:scaleType="centerCrop"
+                           android:layout_weight="1"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:layout_margin="1dp"
+                           android:src="@drawable/camera"/>
+                   </LinearLayout>
+                   <LinearLayout
+                       android:layout_weight="1"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <ImageView
+                           android:scaleType="centerCrop"
+                           android:layout_weight="1"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:layout_margin="1dp"
+                           android:src="@drawable/camera"/>
+
+                       <ImageView
+                           android:scaleType="centerCrop"
+                           android:layout_weight="1"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:layout_margin="1dp"
+                           android:src="@drawable/camera"/>
+                   </LinearLayout>
+               </LinearLayout>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Seo more"
+                   android:textSize="14sp"
+                   android:textColor="#03A9F4"/>
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_marginTop="5dp"
+               android:padding="10dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="#ffffff"
+               android:orientation="vertical">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Top Sellers in Books for you"
+                   android:textSize="18sp"
+                   android:textColor="@color/black"
+                   android:textStyle="normal"/>
+
+               <LinearLayout
+                   android:layout_marginTop="5dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="100dp">
+
+                   <ImageView
+                       android:layout_width="150dp"
+                       android:layout_height="match_parent"
+                       android:src="@drawable/caterpillar"/>
+
+                   <LinearLayout
+                       android:layout_weight="1"
+                       android:layout_marginStart="10dp"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="The Very Hungry Caterpillar"
+                           android:textSize="18sp"
+                           android:textColor="@color/black"
+                           android:textStyle="normal"/>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="$ 5.06"
+                           android:textSize="18sp"
+                           android:textColor="@color/black"
+                           android:textStyle="normal"/>
+                   </LinearLayout>
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_marginTop="5dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="100dp">
+
+                   <ImageView
+                       android:layout_width="150dp"
+                       android:layout_height="match_parent"
+                       android:src="@drawable/good_night"/>
+
+                   <LinearLayout
+                       android:layout_weight="1"
+                       android:layout_marginStart="10dp"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="If Animals Kissed Good Night"
+                           android:textSize="18sp"
+                           android:textColor="@color/black"
+                           android:textStyle="normal"/>
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content">
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="$ 3.55"
+                               android:textSize="18sp"
+                               android:textColor="@color/black"
+                               android:textStyle="normal"/>
+                           <TextView
+                               android:layout_marginStart="20dp"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="$ 7.99"
+                               android:foreground="@drawable/strikethrough"
+                               android:textSize="18sp"
+                               android:textColor="#787878"
+                               android:textStyle="normal"/>
+                       </LinearLayout>
+                   </LinearLayout>
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_marginTop="5dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="100dp">
+
+                   <ImageView
+                       android:layout_width="150dp"
+                       android:layout_height="match_parent"
+                       android:src="@drawable/chicka"/>
+
+                   <LinearLayout
+                       android:layout_weight="1"
+                       android:layout_marginStart="10dp"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Chicka Chicka Boom Boom (Board Book)"
+                           android:textSize="18sp"
+                           android:textColor="@color/black"
+                           android:textStyle="normal"/>
+
+                      <LinearLayout
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content">
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="$ 4.59"
+                           android:textSize="18sp"
+                           android:textColor="@color/black"
+                           android:textStyle="normal"/>
+                       <TextView
+                           android:layout_marginStart="20dp"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="$ 7.99"
+                           android:foreground="@drawable/strikethrough"
+                           android:textSize="18sp"
+                           android:textColor="#808080"
+                           android:textStyle="normal"/>
+
+                      </LinearLayout>
+                   </LinearLayout>
+               </LinearLayout>
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_margin="5dp"
+               android:layout_width="match_parent"
+               android:layout_height="150dp"
+               android:background="@drawable/selection">
+
+               <TextView
+                   android:gravity="center"
+                   android:layout_marginTop="40dp"
+                   android:layout_marginStart="50dp"
+                   android:layout_width="150dp"
+                   android:layout_height="wrap_content"
+                   android:text="Discover our Beauty selection"
+                   android:textSize="18sp"
+                   android:textStyle="bold"/>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_marginTop="5dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="#ffffff"
+               android:orientation="vertical">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Explore Departments"
+                   android:textColor="@color/black"
+                   android:textSize="18sp"
+                   android:layout_marginBottom="10dp"/>
+
+               <androidx.recyclerview.widget.RecyclerView
+                   android:id="@+id/rv_explore"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                   app:spanCount="2"/>
+           </LinearLayout>
+       </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
